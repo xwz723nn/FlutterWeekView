@@ -9,16 +9,17 @@ import 'package:flutter_week_view/src/utils/hour_minute.dart';
 import 'package:flutter_week_view/src/utils/utils.dart';
 import 'package:flutter_week_view/src/widgets/day_view.dart';
 import 'package:flutter_week_view/src/widgets/zoomable_header_widget.dart';
-
+import 'package:intl/intl.dart' as intl;
 /// Contains default builders and formatters.
 class DefaultBuilders {
   /// Formats a day in YYYY-MM-DD format, e.g., 2020-01-15.
-  static String defaultDateFormatter(int year, int month, int day) =>
-      year.toString() +
-      '-' +
-      Utils.addLeadingZero(month) +
-      '-' +
-      Utils.addLeadingZero(day);
+  static String defaultDateFormatter(DateTime date) =>
+      intl.DateFormat.MMMMEEEEd().format(date);
+      // year.toString() +
+      // '-' +
+      // Utils.addLeadingZero(month) +
+      // '-' +
+      // Utils.addLeadingZero(day);
 
   /// Formats a hour in 24-hour HH:MM format, e.g., 15:00.
   static String defaultTimeFormatter(HourMinute time) =>

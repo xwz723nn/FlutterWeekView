@@ -27,7 +27,8 @@ class DayBarStyle {
     Color? color,
     this.decoration,
     Alignment? textAlignment,
-  })  : dateFormatter = dateFormatter ?? DefaultBuilders.defaultDateFormatter,
+  })  : dateFormatter = DefaultBuilders.defaultDateFormatter,
+      //dateFormatter ??DefaultBuilders.defaultDateFormatter,
         color = color ?? const Color(0xFFEBEBEB),
         textAlignment = textAlignment ?? Alignment.center;
 

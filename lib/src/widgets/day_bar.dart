@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_week_view/src/styles/day_bar.dart';
 import 'package:flutter_week_view/src/utils/utils.dart';
 import 'package:flutter_week_view/src/widgets/zoomable_header_widget.dart';
-
+import 'package:intl/intl.dart';
 /// A bar which is showing a day.
 class DayBar extends StatelessWidget {
   /// The date.
@@ -53,7 +53,7 @@ class DayBar extends StatelessWidget {
           decoration: style.decoration,
           alignment: style.textAlignment,
           child: Text(
-            style.dateFormatter(date.year, date.month, date.day),
+            style.dateFormatter(date),
             style: style.textStyle,
           ),
         ),

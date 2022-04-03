@@ -63,7 +63,7 @@ class DayViewStyle extends ZoomableHeaderWidgetStyle {
     double? currentTimeCircleRadius,
     CurrentTimeCirclePosition? currentTimeCirclePosition,
   })  : hourRowHeight = (hourRowHeight ?? 60) < 0 ? 0 : (hourRowHeight ?? 60),
-        backgroundColor = backgroundColor ?? const Color(0xFFF2F2F2),
+        backgroundColor = backgroundColor ?? Colors.white,
         currentTimeRuleHeight =
             (currentTimeRuleHeight ?? 1) < 0 ? 0 : (currentTimeRuleHeight ?? 1),
         currentTimeCircleRadius = (currentTimeCircleRadius ?? 7.5) < 0
